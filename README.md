@@ -1,4 +1,4 @@
-# Trabalho compiladores - Analisador Lexico
+# Trabalho 1 compiladores - Analisador Lexico
 
 ## Trabalho da disciplina de compiladores onde foi feito um programa que utilizasse os conceitos de um analisador léxico
 
