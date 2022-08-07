@@ -1,0 +1,51 @@
+procedimento ANALISADOR_LEXICO;
+
+inicio
+    átomo := cadeia_vazia;
+    enquanto próximo = '☐' 
+        faça PROXIMO;
+
+    se próximo ∈ símbolos_especiais então
+    inicio
+        s :=próximo; 
+        PROXIMO;
+        
+        caso s seja ':' : 
+            se próximo = '=' então 
+                s:= ':='; 
+                PRÓXIMO;
+        outros: nada
+        fim do caso; 
+
+        simbolo := CODIGO(s);
+    fim se
+    
+    senão
+    inicio
+        se proximo ∈ letras então
+            inicio
+        repita
+            atomo := atomo & proximo ; 
+            PRÓXIMO;
+        até proximo ∉ letras_e_digitos;
+        
+        se atomo ∈ palavras_reservada então
+            símbolo := CÓDIGO(átomo);
+        senão
+            símbolo := codigo_de_identificador;
+    fim se
+
+    senão
+    se proximo ∈ dígitos então
+    inicio
+        repita
+            átomo := átomo & próximo ;
+            PRÓXIMO;
+        até próximo ∉ dígitos
+        se próximo ∈ letras então 
+            ERRO;
+        símbolo := código_de_numero;
+    fim se
+
+    senão ERRO;
+fim
