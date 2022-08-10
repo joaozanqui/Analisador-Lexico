@@ -4,6 +4,7 @@
 	Sistema operacional: Windows 10
 	Compilador: Dev-C++
 */
+
 #include <stdio.h>
 #include <string.h>
 
