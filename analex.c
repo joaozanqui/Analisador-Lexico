@@ -1,6 +1,6 @@
 /*	
 	TRABALHO I - Compiladores
-	Jo„o Pedro de Freitas Zanqui
+	Jo√£o Pedro de Freitas Zanqui
 	Sistema operacional: Windows 10
 	Compilador: Dev-C++
 */
